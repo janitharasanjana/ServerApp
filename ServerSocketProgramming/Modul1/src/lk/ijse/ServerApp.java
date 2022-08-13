@@ -14,6 +14,7 @@ public class ServerApp {
         Socket localSocket = serverSocket.accept();
 
         System.out.println("remote socket port " + localSocket.getPort());
-        //System.out.println("remote socket id " + localSocket.getInetAddress());
+        System.out.println("remote socket ip " + localSocket.getInetAddress());
+
     }
 }
