@@ -1,5 +1,6 @@
 package lk.ijse;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.ServerSocket;
@@ -19,5 +20,6 @@ public class ServerApp {
 
         InputStreamReader inputStreamReader = new InputStreamReader(localSocket.getInputStream());
 
+        BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
     }
 }
