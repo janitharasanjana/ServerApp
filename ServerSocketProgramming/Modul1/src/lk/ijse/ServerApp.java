@@ -21,5 +21,8 @@ public class ServerApp {
         InputStreamReader inputStreamReader = new InputStreamReader(localSocket.getInputStream());
 
         BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+
+        String clientMsg = bufferedReader.readLine();
+        System.out.println("client says : " + clientMsg);
     }
 }

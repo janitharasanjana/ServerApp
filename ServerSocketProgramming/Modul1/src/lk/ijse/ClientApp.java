@@ -12,5 +12,6 @@ public class ClientApp {
         System.out.println();
         PrintWriter printWriter = new PrintWriter(socket.getOutputStream()); // we can use this some one or thing to print
         printWriter.println("hello server,kohomada oyata? ");
+        printWriter.flush();
     }
 }
