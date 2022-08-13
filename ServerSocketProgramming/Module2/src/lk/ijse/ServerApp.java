@@ -1,9 +1,6 @@
 package lk.ijse;
 
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -16,6 +13,7 @@ public class ServerApp {
         Socket localSocket = serverSocket.accept();
         System.out.println("client accepted..!");
 
-        DataOutputStream dataOutputStream = new DataOutputStream();
+        DataOutputStream dataOutputStream = new DataOutputStream(localSocket.getOutputStream());
+        DataInputStream dataInputStream = new DataInputStream(localSocket.getInputStream());
     }
 }
