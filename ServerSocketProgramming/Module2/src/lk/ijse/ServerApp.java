@@ -1,6 +1,7 @@
 package lk.ijse;
 
 import java.io.BufferedReader;
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.ServerSocket;
@@ -13,15 +14,8 @@ public class ServerApp {
         System.out.println("Server is running in port " +PORT);
 
         Socket localSocket = serverSocket.accept();
+        System.out.println("client accepted..!");
 
-        System.out.println("remote socket port " + localSocket.getPort());
-        System.out.println("remote socket ip " + localSocket.getInetAddress());
-
-        InputStreamReader inputStreamReader = new InputStreamReader(localSocket.getInputStream());
-
-        BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-
-        String clientMsg = bufferedReader.readLine();
-        System.out.println("client says : " + clientMsg);
+        DataOutputStream dataOutputStream = new DataOutputStream();
     }
 }
