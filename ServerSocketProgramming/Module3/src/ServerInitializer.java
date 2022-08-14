@@ -15,5 +15,6 @@ public class ServerInitializer extends Application {
     public void start(Stage primaryStage) throws IOException {
 
         primaryStage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("ServerForm.fxml"))));
+        primaryStage.show();
     }
 }
