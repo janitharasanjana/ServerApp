@@ -17,6 +17,12 @@ public class ServerFormController {
     DataOutputStream dataOutputStream;
 
     public void initialize (){
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                
+            }
+        })
 
     }
 
