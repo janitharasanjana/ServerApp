@@ -2,10 +2,24 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
-public class ServerFormController {
-    public TextArea txtArea;
-    public TextField txtMessage;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.net.ServerSocket;
+import java.net.Socket;
 
-    public void sendOnAction(ActionEvent actionEvent) {
+public class ServerFormController {
+    private TextArea txtArea;
+
+    private TextField txtMessage;
+    ServerSocket serverSocket;
+    Socket accept;
+    DataInputStream dataInputStream;
+    DataOutputStream dataOutputStream;
+
+    public void initialize (){
+
+    }
+
+    private void sendOnAction(ActionEvent actionEvent) {
     }
 }
