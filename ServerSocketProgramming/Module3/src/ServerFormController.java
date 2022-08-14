@@ -21,11 +21,17 @@ public class ServerFormController {
     public void initialize (){
         new Thread(() -> {
 
+
             try {
                 serverSocket = new ServerSocket(PORT);
+                System.out.println("Server Started...!");
+                accept = serverSocket.accept();
+                System.out.println("client Connected..");
             } catch (IOException e) {
                 e.printStackTrace();
             }
+
+
         }).start();
 
     }
