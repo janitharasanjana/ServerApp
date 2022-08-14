@@ -10,8 +10,8 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ServerFormController">
    <children>
       <Label layoutX="51.0" layoutY="51.0" text="Server" />
-      <TextArea layoutX="51.0" layoutY="92.0" prefHeight="200.0" prefWidth="483.0" />
-      <TextField layoutX="51.0" layoutY="310.0" prefHeight="31.0" prefWidth="395.0" />
-      <Button layoutX="469.0" layoutY="310.0" mnemonicParsing="false" text="send" />
+      <TextArea fx:id="txtArea" layoutX="51.0" layoutY="92.0" prefHeight="200.0" prefWidth="483.0" />
+      <TextField fx:id="txtMessage" layoutX="51.0" layoutY="310.0" prefHeight="31.0" prefWidth="395.0" />
+      <Button layoutX="469.0" layoutY="310.0" mnemonicParsing="false" onAction="#sendOnAction" text="send" />
    </children>
 </AnchorPane>
